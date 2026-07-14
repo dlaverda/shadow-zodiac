@@ -39,10 +39,9 @@ Your data privacy is our priority; all your analysis, local database (SQLite), a
 ## Getting Started
 1. **Purchase License:** Get your license key [here](https://shadow-zodiac.lemonsqueezy.com/checkout/buy/0d5bf812-5ee4-463c-a020-b2b0d5ad42bb).
 2. **eToro Credentials:** 
-   - Open your browser and log in to [eToro](https://www.etoro.com/).
-   - Open Developer Tools (F12) > **Application** > **Cookies** > `https://www.etoro.com/`.
-   - Copy `etoro-prod-id` and `etoro-prod-auth`.
-   - Enter these into the **Settings** tab.
+   - Shadow-Zodiac uses your active session cookies to sync your portfolio.
+   - For official authentication details and security best practices, please refer to the [eToro API Authentication Guide](https://api-portal.etoro.com/getting-started/authentication).
+   - Alternatively, enter your cookies (`etoro-prod-id` and `etoro-prod-auth` found in browser dev tools) into the **Settings** tab.
 3. **Login:** Upon the first launch, you will be prompted to enter your License Key.
 4. **Setup:** The application will automatically detect your local environment.
 5. **Usage:** Access the dashboard to view your insights and manage your analysis settings.

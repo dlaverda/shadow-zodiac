@@ -38,9 +38,14 @@ Your data privacy is our priority; all your analysis, local database (SQLite), a
 
 ## Getting Started
 1. **Purchase License:** Get your license key [here](https://shadow-zodiac.lemonsqueezy.com/checkout/buy/0d5bf812-5ee4-463c-a020-b2b0d5ad42bb).
-2. **Login:** Upon the first launch, you will be prompted to enter your License Key provided via email.
-3. **Setup:** The application will automatically detect your local environment.
-4. **Usage:** Access the dashboard to view your insights and manage your analysis settings.
+2. **eToro Credentials:** 
+   - Open your browser and log in to [eToro](https://www.etoro.com/).
+   - Open Developer Tools (F12) > **Application** > **Cookies** > `https://www.etoro.com/`.
+   - Copy `etoro-prod-id` and `etoro-prod-auth`.
+   - Enter these into the **Settings** tab.
+3. **Login:** Upon the first launch, you will be prompted to enter your License Key.
+4. **Setup:** The application will automatically detect your local environment.
+5. **Usage:** Access the dashboard to view your insights and manage your analysis settings.
 
 ## Need Help?
 If you have any questions, encounter a bug, or need to reset your license key, please contact support via the email provided in your purchase confirmation.

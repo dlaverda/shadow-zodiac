@@ -1,21 +1,10 @@
-MIT License
+Copyright (c) 2026 David Laverda. All rights reserved.
 
-Copyright (c) 2026 Shadow-Zodiac
+This software and its associated documentation are the exclusive property of the author.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+It is strictly prohibited to:
+- Copy, modify, adapt, redistribute, or sublicense the source code, executables (.exe), or associated graphic assets.
+- Reverse engineer, decompile, or disassemble the executable files.
+- Sell, rent, lease, or commercialize all or any part of this application without the explicit written permission of the author.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The use of this software is subject to acquiring a valid subscription license or an official trial period issued by the author through authorized distribution channels.

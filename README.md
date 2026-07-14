@@ -37,9 +37,10 @@ As an independent developer, Shadow-Zodiac is distributed without a paid commerc
 Your data privacy is our priority; all your analysis, local database (SQLite), and configurations remain entirely on your computer.
 
 ## Getting Started
-1. **Login:** Upon the first launch, you will be prompted to enter your License Key provided via email after your Lemon Squeezy subscription.
-2. **Setup:** The application will automatically detect your local environment.
-3. **Usage:** Access the dashboard to view your insights and manage your analysis settings.
+1. **Purchase License:** Get your license key [here](https://shadow-zodiac.lemonsqueezy.com/checkout/buy/0d5bf812-5ee4-463c-a020-b2b0d5ad42bb).
+2. **Login:** Upon the first launch, you will be prompted to enter your License Key provided via email.
+3. **Setup:** The application will automatically detect your local environment.
+4. **Usage:** Access the dashboard to view your insights and manage your analysis settings.
 
 ## Need Help?
 If you have any questions, encounter a bug, or need to reset your license key, please contact support via the email provided in your purchase confirmation.

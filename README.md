@@ -41,7 +41,6 @@ Your data privacy is our priority; all your analysis, local database (SQLite), a
 2. **eToro Credentials:** 
    - Shadow-Zodiac uses your active session cookies to sync your portfolio.
    - For official authentication details and security best practices, please refer to the [eToro API Authentication Guide](https://api-portal.etoro.com/getting-started/authentication).
-   - Alternatively, enter your cookies (`etoro-prod-id` and `etoro-prod-auth` found in browser dev tools) into the **Settings** tab.
 3. **Login:** Upon the first launch, you will be prompted to enter your License Key.
 4. **Setup:** The application will automatically detect your local environment.
 5. **Usage:** Access the dashboard to view your insights and manage your analysis settings.

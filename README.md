@@ -1,6 +1,6 @@
 # 🪐 Shadow-Zodiac — Premium Dashboard & AI Sentiment Sentinel
 
-[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
+[![Version](https://img.shields.io/badge/version-2.6.0-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
 [![License: Lemon Squeezy](https://img.shields.io/badge/License-Lemon%20Squeezy-green.svg)](https://www.lemonsqueezy.com/)
 [![Language: English](https://img.shields.io/badge/Language-English-brightgreen.svg)](#)
 
@@ -45,10 +45,12 @@ Investing in financial markets (stocks, bonds, funds, ETFs, derivatives, or any 
 - **Real-Time eToro Portfolio Tracking**: Live tracking of account equity, available cash balance, allocated funds, open positions, daily/overall P&L, and sparkline trend charts.
 - **AI-Powered Market Sentiment & Analysis**: Multi-engine AI support (Google Gemini `@google/genai`, LM Studio, AnythingLLM) generating technical and fundamental investment signals (`BUY` / `SELL` / `NEUTRAL`).
 - **Multi-Horizon Confidence Scoring**: Structured 1-to-10 confidence ratings provided across 1-Month, 1-Year, and 5-Year time horizons for each position.
-- **Pinnable & Retractable AI Assistant Panel**: Interactive chat side panel with a pushpin button to lock alongside your dashboard, featuring an instant **"Analyser et optimiser mon portefeuille"** action.
+- **Side Drawer Split-Screen AI Assistant**: Interactive side drawer chat panel that resizes the main dashboard layout side-by-side when opened, featuring a thumbtack button and an instant **"Analyser et optimiser mon portefeuille"** action.
 - **AI Trading Signals History Pivot Matrix**: Full-width matrix table displaying assets in rows and historical dates in columns with color-coded buy/sell price cells and source badges (Market vs. AI).
+- **Matrix Row Actions & License-Gated Targeted News**: Delete asset rows directly from the table (Free access) or click "View News" to redirect to asset-specific news (`/news?ticker=TICKER`, Licensed access).
+- **Market News & Financial Feed**: Free global news stream with active filter badge ("Filtre actif : TICKER") and a "Voir toutes les news" reset button.
 - **Digital Eco-Design & Token Savings**: System instructions enforce telegraphic, direct summaries to minimize token consumption and speed up execution.
-- **Integrated License Security**: Instant Lemon Squeezy license key verification at launch with local offline caching.
+- **Integrated License Security & Optional Login**: Optional Lemon Squeezy license key entry on an always-on startup login window with local offline caching.
 
 ---
 
@@ -67,36 +69,61 @@ This is a standard warning for independent software. To install Shadow-Zodiac:
 
 ## 🛠️ Getting Started & Installation
 
-1. **Purchase & License Key**: Get your active **Lemon Squeezy License Key**.
+1. **Purchase & License Key**: Get your active **Lemon Squeezy License Key** (Optional for basic features, required for AI chat & dynamic asset management).
 2. **eToro Credentials**: Obtain your eToro API Key and User Key from your eToro developer portal.
 3. **Alpha Vantage API Key**: To enable financial market history and technical indicator analysis, claim your free API key at [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key) and configure it in the **Settings** panel under *Market Data / Python Strategy*.
 4. **Run the Installer**:
-   Execute **`Shadow-Zodiac Setup 2.2.0.exe`** (located in `C:\Users\XXX\Documents\shadow-zodiac\dist\` or provided in distribution release).
+   Execute **`Shadow-Zodiac Setup 2.4.0.exe`**.
 5. **Login & Setup**:
-   - Open **Shadow-Zodiac** from your Desktop or Start Menu.
-   - Enter your **Lemon Squeezy License Key** (displayed in clear text).
+   - Open **Shadow-Zodiac** from your Desktop or Start Menu (the login screen **always** appears on startup).
+   - Enter your **Lemon Squeezy License Key** in clear text (Optional).
    - Enter your **eToro API Credentials** and check *Remember credentials on this device*.
-6. **Usage**: Access the dashboard to view live insights, manage analysis settings, or ask the pinned AI Assistant to analyze and optimize your portfolio.
+6. **Usage**: Access the dashboard to view live insights, browse market news, manage analysis settings, or open the side drawer AI Assistant to analyze and optimize your portfolio.
 
 ---
 
 ## 📜 Update History
 
+- **v2.6.0 (2026-07-22)**:
+  - **Asset Price Cell Rendering**: Ensured asset prices are continuously saved alongside AI reflections and rendered in matrix cells with automatic fallback price lookup.
+  - **Instant AI Re-Analysis Button (`⚡`)**: Added a direct AI re-analysis action icon on each asset row in the Signal History pivot matrix to trigger an immediate fresh AI analysis on demand.
+- **v2.5.1 (2026-07-22)**:
+  - **Prompt Template Refinement**: Removed personal name references from default AI system prompt configurations.
+  - **Cross-Session Settings Persistence**: Added `/api/settings` REST endpoints and disk configuration synchronization (`data/settings.json`) to prevent API key resets across `npm start` and Electron sessions.
+  - **AI Reflections Table Pagination**: Added interactive pagination controls (Page X of Y, Prev/Next buttons, 5/10/20/50 items per page selector) on the Reflections History widget.
+  - **Full English Translation Audit**: Standardized 100% of UI text, tooltips, buttons, toasts, and error notices to strict English.
+  - **Dropdown Option Contrast Fix**: Styled HTML `<select>` and `<option>` elements with dark background and crisp white text for complete legibility across operating systems.
+  - **Build Security Audit**: Verified zero hardcoded API keys, license tokens, or secrets exist in repository source code or dist bundles.
+  - **AI Signal Generation & Top Trend Sync**: Guaranteed signal persistence into SQLite `trade_signals` for all newly added assets and fallback scenarios with immediate UI re-rendering.
+- **v2.5.0 (2026-07-22)**:
+  - **Full Article News Reader Modal**: Clicking any news card opens a rich modal view displaying the complete news article text, key takeaways, and source details.
+  - **Navigation Menu Streamlining**: Removed redundant "Watchlist" / "Ma Liste de suivi" entries across sidebar navigation menus for a cleaner interface.
+- **v2.4.0 (2026-07-22)**:
+  - **Signal Matrix Row Actions**: Added "Delete" (accessible in Free mode) and "View News" (licensed feature) action controls on each asset row in the "IA Trading Signal History" pivot table.
+  - **Targeted Ticker News Navigation**: Clicking "View News" redirects to the News view with query parameters (`?ticker=TICKER`), displaying asset-specific updates.
+  - **Active Filter & Reset in News View**: Added "Filtre actif : TICKER" badge on the News page with a "Voir toutes les news" button to reset back to the global market feed.
+  - **License Gating for Targeted News**: Non-licensed users clicking "View News" are presented with an explanatory toast notice.
+- **v2.3.0 (2026-07-22)**:
+  - **Always-On Startup Login Screen**: The login window is now presented on every application startup.
+  - **Optional License Key Input**: Entering a Lemon Squeezy license key on login/settings is optional; basic dashboard features remain accessible in Free Mode.
+  - **Dynamic Signal Matrix Asset Management**: Added controls to add or remove asset tickers in the Signal History pivot table, automatically triggering AI analysis for newly added tickers.
+  - **Split-Screen Side Drawer AI Panel**: Replaced popups/modals with a side drawer panel that resizes the main dashboard layout side-by-side when opened.
+  - **Paywall Feature Gating**: Restricted AI chat side panel access and dynamic asset management controls behind valid Lemon Squeezy license keys with user notification toasts in Free Mode.
 - **v2.2.0 (2026-07-22)**:
-  - Added Pinnable & Retractable AI Chat Panel with pushpin button.
-  - Added instant **"Analyser et optimiser mon portefeuille"** action button.
-  - Redesigned AI Trading Signals History into a full-width Pivot Matrix (Assets × Dates).
-  - Native SQLite data persistence with full automated table initialization.
-  - Plain-text Lemon Squeezy license input on login window with *Remember Credentials* option.
+  - **Automated Versioning System**: Integrated `package.json`, `version.json`, `/api/version`, and footer version badge.
+  - **Lemon Squeezy License Control**: Startup license verification across Node server, PowerShell, Python agent, and SPA.
+  - **Gemini Eco-Conception**: Injected strict `system_instruction` commanding telegraphic, zero-politeness, concise responses for token efficiency.
+  - **Strict English Documentation**: Standardized `AGENTS.md`, `README.md`, `DOCUMENTATION.md`, and `SYSTEM_REQUIREMENTS.md` in English.
+  - **Legal Notice & Investment Risk Disclaimer**: Added capital loss risk notice across documentation and login UI.
 - **v2.1.0 (2026-03-29)**:
-  - Multi-Horizon Confidence Scoring (1M / 1Y / 5Y).
-  - Fallback to Google Gemini for unlisted assets.
-  - Self-populating dropdown column filters across all dashboard tables.
+  - **Multi-Horizon Confidence Scoring**: Structured 1M / 1Y / 5Y ratings.
+  - **Google Gemini Ticker Fallback**: Automatic failover to Gemini for unlisted or missing market tickers.
+  - **Dynamic Table Column Filtering**: Self-populating dropdown filters across all dashboard tables.
 - **v2.0.0 (2026-01-15)**:
   - Real-time eToro tracking, SQLite persistence server on port `3456`.
   - Multi-backend LLM integration (Gemini, LM Studio, AnythingLLM).
 - **v1.0.0 (2025-07-14)**:
-  - Initial commercial release. Full Lemon Squeezy integration, native Windows NSIS packaging, and offline grace period.
+  - Initial commercial release. Full Lemon Squeezy integration, native Windows NSIS packaging, and 72-hour secure offline grace period.
 
 Check for the latest updates and binaries at: `https://gitlab.com/d.laverda-group/d.laverda-project.git`
 

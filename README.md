@@ -1,6 +1,6 @@
 # 🪐 Shadow-Zodiac — Premium Dashboard & AI Sentiment Sentinel
 
-[![Version](https://img.shields.io/badge/version-2.6.0-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
+[![Version](https://img.shields.io/badge/version-2.6.1-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
 [![License: Lemon Squeezy](https://img.shields.io/badge/License-Lemon%20Squeezy-green.svg)](https://www.lemonsqueezy.com/)
 [![Language: English](https://img.shields.io/badge/Language-English-brightgreen.svg)](#)
 
@@ -45,7 +45,7 @@ Investing in financial markets (stocks, bonds, funds, ETFs, derivatives, or any 
 - **Real-Time eToro Portfolio Tracking**: Live tracking of account equity, available cash balance, allocated funds, open positions, daily/overall P&L, and sparkline trend charts.
 - **AI-Powered Market Sentiment & Analysis**: Multi-engine AI support (Google Gemini `@google/genai`, LM Studio, AnythingLLM) generating technical and fundamental investment signals (`BUY` / `SELL` / `NEUTRAL`).
 - **Multi-Horizon Confidence Scoring**: Structured 1-to-10 confidence ratings provided across 1-Month, 1-Year, and 5-Year time horizons for each position.
-- **Side Drawer Split-Screen AI Assistant**: Interactive side drawer chat panel that resizes the main dashboard layout side-by-side when opened, featuring a thumbtack button and an instant **"Analyser et optimiser mon portefeuille"** action.
+- **Side Drawer Split-Screen AI Assistant**: Interactive side drawer chat panel that resizes the main dashboard layout side-by-side when opened, featuring a thumbtack button and an instant **"Analyze and Optimize My Portfolio"** action.
 - **AI Trading Signals History Pivot Matrix**: Full-width matrix table displaying assets in rows and historical dates in columns with color-coded buy/sell price cells and source badges (Market vs. AI).
 - **Matrix Row Actions & License-Gated Targeted News**: Delete asset rows directly from the table (Free access) or click "View News" to redirect to asset-specific news (`/news?ticker=TICKER`, Licensed access).
 - **Market News & Financial Feed**: Free global news stream with active filter badge ("Filtre actif : TICKER") and a "Voir toutes les news" reset button.
@@ -69,22 +69,86 @@ This is a standard warning for independent software. To install Shadow-Zodiac:
 
 ## 🛠️ Getting Started & Installation
 
-1. **Purchase & License Key**: Get your active **Lemon Squeezy License Key** (Optional for basic features, required for AI chat & dynamic asset management).
-   💡 Special Offer: Get 50% off for 3 months with code C1MDQ3NQ (Offer valid through end of 2026)."
-3. **eToro Credentials**: Obtain your eToro API Key and User Key from your eToro developer portal.
-4. **Alpha Vantage API Key**: To enable financial market history and technical indicator analysis, claim your free API key at [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key) and configure it in the **Settings** panel under *Market Data / Python Strategy*.
-5. **Run the Installer**:
+1. **Purchase & License Key**: Purchase your active license key at [https://shadow-zodiac.lemonsqueezy.com/checkout/buy/01bd75ff-2bb2-40dd-a9ea-e349b37cffa7](https://shadow-zodiac.lemonsqueezy.com/checkout/buy/01bd75ff-2bb2-40dd-a9ea-e349b37cffa7) (Optional for basic features, required for AI chat & dynamic asset management). 💡 Special Offer: Get 50% off for 3 months with code C1MDQ3NQ (Offer valid through end of 2026).
+2. **eToro Credentials**: Obtain your eToro API Key and User Key from your eToro developer portal.
+3. **Alpha Vantage API Key**: To enable financial market history and technical indicator analysis, claim your free API key at [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key) and configure it in the **Settings** panel under *Market Data / Python Strategy*.
+4. **Run the Installer**:
    Execute **`Shadow-Zodiac Setup 2.4.0.exe`**.
-6. **Login & Setup**:
+5. **Login & Setup**:
    - Open **Shadow-Zodiac** from your Desktop or Start Menu (the login screen **always** appears on startup).
    - Enter your **Lemon Squeezy License Key** in clear text (Optional).
    - Enter your **eToro API Credentials** and check *Remember credentials on this device*.
-7. **Usage**: Access the dashboard to view live insights, browse market news, manage analysis settings, or open the side drawer AI Assistant to analyze and optimize your portfolio.
+6. **Usage**: Access the dashboard to view live insights, browse market news, manage analysis settings, or open the side drawer AI Assistant to analyze and optimize your portfolio.
+
+---
+
+## 💡 Example AI Strategy Prompt (Configurable in Settings)
+
+You can customize your AI Assistant's investment rules and analysis methodology in **Settings** under *AI Analysis Prompt*. Below is a recommended **Global Growth Strategy** prompt template:
+
+```text
+1. ROLE AND IDENTITY
+
+You are the strategic expert managing a portfolio on eToro. Your sole objective is aggressive capital maximization (Growth). You are not seeking passive security, but consistent outperformance against the S&P 500 by exploiting global technology cycles and momentum, all while fully neutralizing "tax friction."
+
+
+2. GOLDEN RULES & TAX CONSTRAINTS
+
+
+- Zero Direct FR Stocks: Strict prohibition against buying French securities on eToro (25% withholding tax at source). Systematically redirect to the PEA (Plan d'Épargne en Actions) for these assets.
+- Dividend Efficiency: Prioritize "Acc" (accumulating) assets or low-dividend / high-growth stocks to minimize tax withholdings (W-8BEN 15%).
+- Zero Leverage: Purchases made strictly at X1 (unleveraged, no long CFDs).
+- Single Currency: All analyses, amounts, and targets must be expressed in USD ($).
+- Risk Management: Every buy recommendation must be accompanied by an invalidation level (price or fundamental metric) triggering a partial or full exit.
+
+
+3. TARGET PORTFOLIO STRUCTURE (75% OFFENSIVE / 25% RESILIENT)
+
+
+The overall allocation must lean toward this "Global Growth" balance:
+- A. THE OFFENSIVE ENGINE (75%): Semiconductors, AI, Hyper-growth Software, Mega-cap Tech, Big Data, Global Momentum.
+- B. THE RESILIENT SHIELD (25%): S&P 500 / Nasdaq Core ETFs, Mature Healthcare/Biotech, or high Free Cash Flow (FCF) stocks resilient to high interest rates.
+
+
+4. MARKET INTELLIGENCE & ANALYSIS METHODOLOGY
+
+
+Before any recommendation or rebalancing, you must conduct recent financial data research:
+1. Live Technicals & Momentum: Verification of the current price, position relative to ATH/Dip, RSI (14), 50-day SMA, and 200-day SMA.
+2. Retrospective Check (1 year): Is the asset overheating or in a healthy correction?
+3. Strategic Projections:
+   - 1 year: Price target (immediate catalysts: Earnings, rate cycles).
+   - 3 years: Market share capture potential.
+   - 5 years: "Multi-bagger" vision (ability to double or triple).
+4. Contrarian Analysis (Bear Case): What is the main risk that could void the thesis?
+5. Macro & Geopolitical Impact: Consideration of recent macroeconomic conditions and earnings reports.
+
+
+5. MANDATORY RESPONSE FORMAT
+
+
+For every interaction, structure your response exactly as follows:
+
+
+1. 🟢 Tax Check & Eligibility (eToro vs PEA validation / W-8BEN treatment).
+2. 📊 Live Technical & Momentum Analysis (Current price, RSI, SMAs, market situation).
+3. 🎯 Investment Thesis & Projections (Why this asset? 1, 3, and 5-year targets).
+4. ⚠️ Bear Case & Invalidation Threshold (Major risk + price level / exit trigger).
+5. 💰 Precise Action Plan (Exact order to execute on eToro in USD: Buy / Sell / Rebalance to match the target allocation).
+```
 
 ---
 
 ## 📜 Update History
 
+- **v2.6.1 (2026-07-22)**:
+  - **Prompt Template Refinement**: Removed personal name references from default AI system prompt configurations.
+  - **Cross-Session Settings & API Key Persistence**: Added `/api/settings` REST endpoints and disk configuration synchronization (`data/settings.json`) to guarantee API keys (Google Gemini, Alpha Vantage, eToro credentials) persist across `npm start` and Electron sessions.
+  - **Full Reflections History Pagination**: Implemented interactive pagination controls (Page X of Y, Prev/Next buttons, 5/10/20/50 items per page selector) on the Reflections History widget.
+  - **Full English Translation Audit**: Standardized 100% of UI text, tooltips, buttons, toasts, and error notices to strict English.
+  - **Dropdown Option Contrast Fix**: Styled HTML `<select>` and `<option>` elements with dark background and crisp white text for complete legibility across operating systems.
+  - **Build Security Audit**: Verified zero hardcoded API keys, license tokens, or secrets exist in repository source code or dist bundles.
+  - **AI Signal Generation & Top Trend Sync**: Guaranteed signal persistence into SQLite `trade_signals` for all newly added assets and fallback scenarios with immediate UI re-rendering.
 - **v2.6.0 (2026-07-22)**:
   - **Asset Price Cell Rendering**: Ensured asset prices are continuously saved alongside AI reflections and rendered in matrix cells with automatic fallback price lookup.
   - **Instant AI Re-Analysis Button (`⚡`)**: Added a direct AI re-analysis action icon on each asset row in the Signal History pivot matrix to trigger an immediate fresh AI analysis on demand.

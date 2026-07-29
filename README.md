@@ -70,15 +70,16 @@ This is a standard warning for independent software. To install Shadow-Zodiac:
 ## 🛠️ Getting Started & Installation
 
 1. **Purchase & License Key**: Get your active **Lemon Squeezy License Key** (Optional for basic features, required for AI chat & dynamic asset management).
-2. **eToro Credentials**: Obtain your eToro API Key and User Key from your eToro developer portal.
-3. **Alpha Vantage API Key**: To enable financial market history and technical indicator analysis, claim your free API key at [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key) and configure it in the **Settings** panel under *Market Data / Python Strategy*.
-4. **Run the Installer**:
+   💡 Special Offer: Get 50% off for 3 months with code C1MDQ3NQ (Offer valid through end of 2026)."
+3. **eToro Credentials**: Obtain your eToro API Key and User Key from your eToro developer portal.
+4. **Alpha Vantage API Key**: To enable financial market history and technical indicator analysis, claim your free API key at [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key) and configure it in the **Settings** panel under *Market Data / Python Strategy*.
+5. **Run the Installer**:
    Execute **`Shadow-Zodiac Setup 2.4.0.exe`**.
-5. **Login & Setup**:
+6. **Login & Setup**:
    - Open **Shadow-Zodiac** from your Desktop or Start Menu (the login screen **always** appears on startup).
    - Enter your **Lemon Squeezy License Key** in clear text (Optional).
    - Enter your **eToro API Credentials** and check *Remember credentials on this device*.
-6. **Usage**: Access the dashboard to view live insights, browse market news, manage analysis settings, or open the side drawer AI Assistant to analyze and optimize your portfolio.
+7. **Usage**: Access the dashboard to view live insights, browse market news, manage analysis settings, or open the side drawer AI Assistant to analyze and optimize your portfolio.
 
 ---
 

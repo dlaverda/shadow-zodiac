@@ -1,60 +1,71 @@
-# 🪐 Shadow-Zodiac — Premium Dashboard & AI Sentiment Sentinel
+# 🪐 Shadow-Zodiac — eToro Financial Intelligence & AI Sentiment Sentinel
 
-[![Version](https://img.shields.io/badge/version-2.6.1-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
+[![Version](https://img.shields.io/badge/version-2.7.1-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
 [![License: Lemon Squeezy](https://img.shields.io/badge/License-Lemon%20Squeezy-green.svg)](https://www.lemonsqueezy.com/)
+[![Build: Windows Desktop](https://img.shields.io/badge/Platform-Windows%20Desktop-informational.svg)](#)
 [![Language: English](https://img.shields.io/badge/Language-English-brightgreen.svg)](#)
 
-> **Transform your eToro experience with professional-grade market intelligence.**
+> **Transform your eToro investment experience with 100% local, privacy-first AI market sentiment and real-time portfolio analytics.**
 
-**Shadow-Zodiac** is the ultimate command center for modern investors. It combines real-time portfolio tracking with deep AI-driven sentiment analysis to help you make smarter, data-backed decisions in today's fast-moving markets.
+**Shadow-Zodiac** is the ultimate desktop command center for modern stock, crypto, and ETF investors. It bridges live eToro portfolio tracking with advanced Large Language Model (LLM) intelligence—analyzing technical momentum, fundamental reports, news streams, and macro risks to deliver actionable investment signals without compromising your financial data privacy.
 
 ---
 
 ## ⚠️ Important Legal Notice & Capital Loss Risk Warning
 
-### INVESTMENT RISK WARNING
-
-Investing in financial markets (stocks, bonds, funds, ETFs, derivatives, or any other financial instruments) involves significant risks.
-
-1. **Risk of Capital Loss**:
-   Past performance is no guarantee of future results and does not constitute a performance yield guarantee. The value of investments and the income derived from them can fluctuate up or down. You may not recover the amount initially invested. In certain specific cases (notably when utilizing leverage or deferred settlement services), losses may even exceed your initial capital deposit.
-
-2. **No Financial Advice**:
-   The information, analyses, charts, or data provided to you are strictly for indicative decision-support purposes and do not in any way constitute investment advice, a sales offer, or a solicitation to buy or sell financial instruments.
-
-3. **Profile Suitability**:
-   Before making any investment decision, it is the sole responsibility of the investor to ensure that chosen assets correspond to their financial situation, level of knowledge and experience, investment objectives, and placement time horizon. If you do not understand the risks associated with financial instruments, consulting an independent financial advisor is strongly recommended.
-
-4. **No Automated eToro Order Execution**:
-   Shadow Zodiac **does NOT execute buy or sell orders** on eToro or any third-party broker. The application has no automated order submission or trading execution capabilities. All final trading choices remain under the exclusive control of the investor.
+> ### 🛑 INVESTMENT RISK WARNING
+>
+> Investing in financial markets (stocks, bonds, funds, ETFs, derivatives, or any other financial instruments) involves significant risks.
+>
+> 1. **Risk of Capital Loss**: Past performance is no guarantee of future results and does not constitute a performance yield guarantee. The value of investments and the income derived from them can fluctuate up or down. You may not recover the amount initially invested. In certain specific cases (notably when utilizing leverage or deferred settlement services), losses may even exceed your initial capital deposit.
+> 2. **No Financial Advice**: The information, analyses, charts, or data provided to you are strictly for indicative decision-support purposes and do not in any way constitute investment advice, a sales offer, or a solicitation to buy or sell financial instruments.
+> 3. **Profile Suitability**: Before making any investment decision, it is the sole responsibility of the investor to ensure that chosen assets correspond to their financial situation, level of knowledge and experience, investment objectives, and placement time horizon. If you do not understand the risks associated with financial instruments, consulting an independent financial advisor is strongly recommended.
+> 4. **No Automated eToro Order Execution**: Shadow Zodiac **does NOT execute buy or sell orders** on eToro or any third-party broker. The application has no automated order submission or trading execution capabilities. All final trading choices remain under the exclusive control of the investor.
 
 ---
 
-## 🌟 Why Traders Choose Shadow-Zodiac
+## 🌟 Why Investors Choose Shadow-Zodiac
 
-- **AI-Powered Market Intel**: Go beyond simple charts. Trigger deep sentiment analysis synthesizing technical trends, fundamental data, news, and geopolitical risks for any asset.
-- **The "Sentiment Sentinel"**: Don't just watch the market; understand the hidden consensus. Our AI monitors market moods to give you an edge before the crowd reacts.
-- **Aggressive Growth Strategy**: Configure the AI to act as your personal strategist, optimized for capital growth, fiscal efficiency, and compound returns.
-- **Full Privacy**: Unlike web-based trackers, Shadow-Zodiac runs locally on your machine. Your API keys, trading data, and reflections are stored 100% locally in SQLite—no prying eyes.
-- **Offline-Ready**: Trade with confidence even when your connection drops, with a secure offline grace period for full functionality.
-
----
-
-## 🚀 Key Features
-
-- **Real-Time eToro Portfolio Tracking**: Live tracking of account equity, available cash balance, allocated funds, open positions, daily/overall P&L, and sparkline trend charts.
-- **AI-Powered Market Sentiment & Analysis**: Multi-engine AI support (Google Gemini `@google/genai`, LM Studio, AnythingLLM) generating technical and fundamental investment signals (`BUY` / `SELL` / `NEUTRAL`).
-- **Multi-Horizon Confidence Scoring**: Structured 1-to-10 confidence ratings provided across 1-Month, 1-Year, and 5-Year time horizons for each position.
-- **Side Drawer Split-Screen AI Assistant**: Interactive side drawer chat panel that resizes the main dashboard layout side-by-side when opened, featuring a thumbtack button and an instant **"Analyze and Optimize My Portfolio"** action.
-- **AI Trading Signals History Pivot Matrix**: Full-width matrix table displaying assets in rows and historical dates in columns with color-coded buy/sell price cells and source badges (Market vs. AI).
-- **Matrix Row Actions & License-Gated Targeted News**: Delete asset rows directly from the table (Free access) or click "View News" to redirect to asset-specific news (`/news?ticker=TICKER`, Licensed access).
-- **Market News & Financial Feed**: Free global news stream with active filter badge ("Filtre actif : TICKER") and a "Voir toutes les news" reset button.
-- **Digital Eco-Design & Token Savings**: System instructions enforce telegraphic, direct summaries to minimize token consumption and speed up execution.
-- **Integrated License Security & Optional Login**: Optional Lemon Squeezy license key entry on an always-on startup login window with local offline caching.
+- 🔒 **100% Local-First & Privacy-First**: Unlike web-based trackers, Shadow-Zodiac runs entirely on your local machine. Your eToro API keys, portfolio values, trade signals, and AI reflections are stored 100% locally in SQLite (`database.sqlite`)—zero cloud telemetry, zero prying eyes.
+- 🤖 **Multi-Engine AI Sentiment Analysis**: Native support for **Google Gemini (`@google/genai`)**, **LM Studio (100% offline local LLM)**, and **AnythingLLM**. Switch between cloud and local inference in a single click.
+- 📊 **Multi-Horizon Decision Matrix**: Real-time `BUY`, `SELL`, and `NEUTRAL` signals paired with structured **1-Month, 1-Year, and 5-Year confidence ratings** (1-10 scale).
+- 🎯 **100% Configurable AI Strategy Prompt**: Fully customizable system prompt in **Settings** (`"AI Analysis Prompt"`). Shipped with a pre-configured, high-performance "Global Growth & Tax Friction Neutralization" template.
+- ⚡ **Digital Eco-Design & Fast Execution**: System prompts enforce a direct, telegraphic style to minimize token consumption, reduce latency, and lower environmental footprint.
+- 🌐 **Offline-Ready Security**: Trade with confidence even when your connection drops, backed by a 24-hour offline cache grace period.
 
 ---
 
-## ⚠️ Important Note regarding Installation (Windows SmartScreen)
+## ⚡ Free vs. Premium Licensed Comparison
+
+Shadow-Zodiac operates on a transparent **Freemium** model. Basic portfolio tracking and market news are free forever, while advanced AI assistant features and dynamic asset management are unlocked with a Lemon Squeezy license key:
+
+| Feature | 🆓 Free Tier | 🔑 Premium Licensed Tier |
+|---|:---:|:---:|
+| **Real-Time eToro Portfolio & Cash Tracking** | ✅ Included | ✅ Included |
+| **Live World Indices & Market Quotes** | ✅ Included | ✅ Included |
+| **Global Market News & Full Article Reader** | ✅ Included | ✅ Included |
+| **AI Trade Signals History Matrix (Read-Only)** | ✅ Included | ✅ Included |
+| **Dynamic Asset Ticker Management (+Add / Delete)** | 🔒 Restricted | ✅ **Unlocked** |
+| **Targeted Asset News Filter (`?ticker=XYZ`)** | 🔒 Restricted | ✅ **Unlocked** |
+| **Side Drawer Split-Screen AI Assistant Panel** | 🔒 Restricted | ✅ **Unlocked** |
+| **Instant "Analyze and Optimize My Portfolio" Action** | 🔒 Restricted | ✅ **Unlocked** |
+| **Customizable AI Strategy Prompt in Settings** | 🔒 Restricted | ✅ **Unlocked** |
+
+---
+
+## 🚀 Key Features Breakdown
+
+- 📈 **Real-Time eToro Tracking**: Live tracking of account equity, available cash balance, allocated funds, open positions, daily/overall P&L, and sparkline trend charts.
+- 🤖 **AI-Powered Sentiment Sentinel**: Multi-engine AI support (Google Gemini, LM Studio, AnythingLLM) generating technical and fundamental investment signals (`BUY` / `SELL` / `NEUTRAL`).
+- 📐 **Multi-Horizon Confidence Scoring**: Structured 1-to-10 confidence ratings provided across 1-Month, 1-Year, and 5-Year time horizons for each position.
+- 📐 **Side Drawer Split-Screen AI Assistant**: Interactive side drawer chat panel that resizes the main dashboard layout side-by-side when opened, featuring a thumbtack button and an instant **"Analyze and Optimize My Portfolio"** action.
+- 📊 **AI Trading Signals History Pivot Matrix**: Full-width matrix table displaying assets in rows and historical dates in columns with color-coded buy/sell price cells and source badges (Market vs. AI).
+- 📰 **Market News & Full Article Modal Reader**: Free global news stream with full article reader modal, active ticker filter badge, and "View all news" reset button.
+- 💡 **Configurable Strategy Rules**: Customize technical signal calculation thresholds (`buyThresholdPct` / `sellThresholdPct`) and AI system prompts directly in Settings.
+
+---
+
+## ⚠️ Important Note Regarding Installation (Windows SmartScreen)
 
 As an independent developer, Shadow-Zodiac is distributed without a paid commercial code-signing certificate. When you run the installer for the first time, Windows might display a blue window stating: **"Windows protected your PC"** (SmartScreen).
 
@@ -67,24 +78,25 @@ This is a standard warning for independent software. To install Shadow-Zodiac:
 
 ---
 
-## 🛠️ Getting Started & Installation
+## 🛠️ Getting Started & Installation Guide
 
-1. **Purchase & License Key**: Purchase your active license key at [https://shadow-zodiac.lemonsqueezy.com/checkout/buy/01bd75ff-2bb2-40dd-a9ea-e349b37cffa7](https://shadow-zodiac.lemonsqueezy.com/checkout/buy/01bd75ff-2bb2-40dd-a9ea-e349b37cffa7) (Optional for basic features, required for AI chat & dynamic asset management). 💡 Special Offer: Get 50% off for 3 months with code C1MDQ3NQ (Offer valid through end of 2026).
-2. **eToro Credentials**: Obtain your eToro API Key and User Key from your eToro developer portal.
-3. **Alpha Vantage API Key**: To enable financial market history and technical indicator analysis, claim your free API key at [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key) and configure it in the **Settings** panel under *Market Data / Python Strategy*.
-4. **Run the Installer**:
-   Execute **`Shadow-Zodiac Setup 2.4.0.exe`**.
-5. **Login & Setup**:
+1. 🔑 **Purchase & License Key**: Purchase your active license key at [https://shadow-zodiac.lemonsqueezy.com/checkout/buy/01bd75ff-2bb2-40dd-a9ea-e349b37cffa7](https://shadow-zodiac.lemonsqueezy.com/checkout/buy/01bd75ff-2bb2-40dd-a9ea-e349b37cffa7) (Optional for basic features, required for AI chat & dynamic asset management).  
+   💡 **Special Offer**: Get **50% off for 3 months** with code **`C1MDQ3NQ`** *(Offer valid through end of 2026)*.
+2. 🔑 **eToro Credentials**: Obtain your eToro API Key and User Key from your eToro developer portal.
+3. 📈 **Alpha Vantage API Key**: To enable financial market history and technical indicator analysis, claim your free API key at [https://www.alphavantage.co/support/#api-key](https://www.alphavantage.co/support/#api-key) and configure it in the **Settings** panel under *Market Data / Python Strategy*.
+4. 💻 **Run the Installer**:
+   Execute **`Shadow-Zodiac Setup 2.7.0.exe`** (located in `dist/` or provided in release downloads).
+5. 🔐 **Login & Setup**:
    - Open **Shadow-Zodiac** from your Desktop or Start Menu (the login screen **always** appears on startup).
    - Enter your **Lemon Squeezy License Key** in clear text (Optional).
    - Enter your **eToro API Credentials** and check *Remember credentials on this device*.
-6. **Usage**: Access the dashboard to view live insights, browse market news, manage analysis settings, or open the side drawer AI Assistant to analyze and optimize your portfolio.
+6. 🚀 **Usage**: Access the dashboard to view live insights, browse market news, manage analysis settings, or open the side drawer AI Assistant to analyze and optimize your portfolio.
 
 ---
 
-## 💡 Example AI Strategy Prompt (Configurable in Settings)
+## 💡 Configurable AI Strategy Prompt Template
 
-You can customize your AI Assistant's investment rules and analysis methodology in **Settings** under *AI Analysis Prompt*. Below is a recommended **Global Growth Strategy** prompt template:
+You can customize your AI Assistant's investment rules and analysis methodology in **Settings** under *AI Analysis Prompt*. Below is the default **Global Growth Strategy** prompt template:
 
 ```text
 1. ROLE AND IDENTITY
@@ -141,6 +153,15 @@ For every interaction, structure your response exactly as follows:
 
 ## 📜 Update History
 
+- **v2.7.1 (2026-07-22)**:
+  - **European Ticker Exchange Suffix Fallback**: Implemented automatic retry mechanism for European stocks without explicit suffixes (e.g. `RNO` -> `RNO.PA`, `.DE`, `.L`, `.MI`, `.AS`), automatically storing history under both base and resolved exchange symbols.
+  - **LLM Pipeline Guard & Price Validation**: Added data validation before issuing LLM API calls, preventing wasteful API token consumption when price history is absent.
+  - **SQLite Warning Elimination**: Resolved `ensureReflectionsTable is not defined` ReferenceError by calling `ensureDatabaseTables()` across storage modules.
+- **v2.7.0 (2026-07-22)**:
+  - **SQL News & Portfolio History Tables**: Created `news_history` and `portfolio_history` SQLite tables with REST API persistence endpoints (`/api/news`, `/api/portfolio/history`).
+  - **Configurable Buy/Sell Signal Thresholds**: Added signal calculation explanation and threshold customization inputs (`buyThresholdPct`, `sellThresholdPct`) in Settings.
+  - **Clickable GitHub Releases Link**: Integrated direct update link to `https://github.com/dlaverda/shadow-zodiac/releases` on footer version badge, README, and update notifications.
+  - **Full RAG Database AI Context Pipeline**: Enhanced `ai_agent.py` to query and synthesize `market_history`, `trade_signals`, `reflections`, `news_history`, and `top_trends` from SQLite into AI prompts.
 - **v2.6.1 (2026-07-22)**:
   - **Prompt Template Refinement**: Removed personal name references from default AI system prompt configurations.
   - **Cross-Session Settings & API Key Persistence**: Added `/api/settings` REST endpoints and disk configuration synchronization (`data/settings.json`) to guarantee API keys (Google Gemini, Alpha Vantage, eToro credentials) persist across `npm start` and Electron sessions.
@@ -155,11 +176,6 @@ For every interaction, structure your response exactly as follows:
 - **v2.5.1 (2026-07-22)**:
   - **Prompt Template Refinement**: Removed personal name references from default AI system prompt configurations.
   - **Cross-Session Settings Persistence**: Added `/api/settings` REST endpoints and disk configuration synchronization (`data/settings.json`) to prevent API key resets across `npm start` and Electron sessions.
-  - **AI Reflections Table Pagination**: Added interactive pagination controls (Page X of Y, Prev/Next buttons, 5/10/20/50 items per page selector) on the Reflections History widget.
-  - **Full English Translation Audit**: Standardized 100% of UI text, tooltips, buttons, toasts, and error notices to strict English.
-  - **Dropdown Option Contrast Fix**: Styled HTML `<select>` and `<option>` elements with dark background and crisp white text for complete legibility across operating systems.
-  - **Build Security Audit**: Verified zero hardcoded API keys, license tokens, or secrets exist in repository source code or dist bundles.
-  - **AI Signal Generation & Top Trend Sync**: Guaranteed signal persistence into SQLite `trade_signals` for all newly added assets and fallback scenarios with immediate UI re-rendering.
 - **v2.5.0 (2026-07-22)**:
   - **Full Article News Reader Modal**: Clicking any news card opens a rich modal view displaying the complete news article text, key takeaways, and source details.
   - **Navigation Menu Streamlining**: Removed redundant "Watchlist" / "Ma Liste de suivi" entries across sidebar navigation menus for a cleaner interface.
@@ -190,7 +206,7 @@ For every interaction, structure your response exactly as follows:
 - **v1.0.0 (2025-07-14)**:
   - Initial commercial release. Full Lemon Squeezy integration, native Windows NSIS packaging, and 72-hour secure offline grace period.
 
-Check for the latest updates and binaries at: `https://gitlab.com/d.laverda-group/d.laverda-project.git`
+Check for the latest updates and binaries at: `https://gitlab.com/d.laverda-group/d.laverda-project.git` or `https://github.com/dlaverda/shadow-zodiac/releases`
 
 ---
 

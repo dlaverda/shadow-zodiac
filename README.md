@@ -1,6 +1,6 @@
 # 🪐 Shadow-Zodiac — eToro Financial Intelligence & AI Sentiment Sentinel
 
-[![Version](https://img.shields.io/badge/version-2.7.1-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
 [![License: Lemon Squeezy](https://img.shields.io/badge/License-Lemon%20Squeezy-green.svg)](https://www.lemonsqueezy.com/)
 [![Build: Windows Desktop](https://img.shields.io/badge/Platform-Windows%20Desktop-informational.svg)](#)
 [![Language: English](https://img.shields.io/badge/Language-English-brightgreen.svg)](#)
@@ -153,6 +153,23 @@ For every interaction, structure your response exactly as follows:
 
 ## 📜 Update History
 
+- **v3.0.0 (2026-07-30)**:
+  - **Rich Markdown Response Rendering**: Integrated `marked` engine (`marked.parse`) for complete Github Flavored Markdown (GFM) rendering of AI chat messages, formatted headers, bold/italic highlights, bullet/numbered lists, blockquotes, and code blocks.
+  - **Click-and-Drag Resizable AI Chat Drawer**: Added a vertical drag handle (`#ai-resize-handle`) on the left border of the AI Assistant drawer.
+  - **Interactive Mouse Drag Logic**: Smooth 60fps panel width adjustment with mouse drag event handlers (`mousedown`, `mousemove`, `mouseup`).
+  - **Layout Bounds & Constraints**: Enforced strict bounds (`minWidth: 320px`, `maxWidth: 80vw`) with `col-resize` cursors and text selection disabling during drag operations.
+  - **Persistent Layout Preference**: Automatically saves user's custom drawer width preference to `localStorage.getItem('shadow_ai_panel_width')`.
+- **v2.9.0 (2026-07-30)**:
+  - **Automatic MySQL AI Chat Persistence**: Implemented complete user and AI chat interaction storage in MySQL database table `ai_discussions`.
+  - **Non-Blocking Asynchronous Hooks**: User prompts and AI responses are saved asynchronously (`POST /api/chat/messages`) without delaying UI chat rendering.
+  - **Resilient Dual Storage Architecture**: Tries MySQL connection pool (`mysql2/promise`) first; if unconfigured or disconnected, gracefully falls back to local SQLite `ai_discussions` table and logs warnings with `[Storage]` prefix.
+  - **MySQL Configuration Settings Panel**: Added dedicated **MySQL AI Chat Persistence** configuration card in Settings View (`js/views/settings.js`) with an interactive **Test Connection** button (`POST /api/mysql/test`).
+- **v2.8.0 (2026-07-30)**:
+  - **Portfolio History View (`#portfolio-history`)**: Introduced a dedicated analytics page for historical eToro portfolio tracking (`js/views/portfolio-history.js`).
+  - **Interactive Stacked Area Chart**: Rendered using Chart.js with top boundary line for total equity and stacked semi-transparent color fills for individual asset allocations.
+  - **Dynamic Timeframe Selector**: Supports instant switching and aggregation between `Daily` (Jour), `Monthly` (Mois), and `Yearly` (Année) views.
+  - **Historical Data Table with Pagination**: Positioned below the chart with sortable columns (Date, Total Equity, Available Cash, Asset Breakdown pills, and Period Change %) and interactive pagination controls (5, 10, 20, 50 rows per page).
+  - **SQLite Asset Breakdown Column**: Enhanced `portfolio_history` schema with `asset_breakdown TEXT` and automatic snapshot creation on portfolio refreshes.
 - **v2.7.1 (2026-07-22)**:
   - **European Ticker Exchange Suffix Fallback**: Implemented automatic retry mechanism for European stocks without explicit suffixes (e.g. `RNO` -> `RNO.PA`, `.DE`, `.L`, `.MI`, `.AS`), automatically storing history under both base and resolved exchange symbols.
   - **LLM Pipeline Guard & Price Validation**: Added data validation before issuing LLM API calls, preventing wasteful API token consumption when price history is absent.

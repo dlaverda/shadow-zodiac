@@ -1,6 +1,6 @@
 # 🪐 Shadow-Zodiac — eToro Financial Intelligence & AI Sentiment Sentinel
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
+[![Version](https://img.shields.io/badge/version-3.0.1-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
 [![License: Lemon Squeezy](https://img.shields.io/badge/License-Lemon%20Squeezy-green.svg)](https://www.lemonsqueezy.com/)
 [![Build: Windows Desktop](https://img.shields.io/badge/Platform-Windows%20Desktop-informational.svg)](#)
 [![Language: English](https://img.shields.io/badge/Language-English-brightgreen.svg)](#)
@@ -153,6 +153,9 @@ For every interaction, structure your response exactly as follows:
 
 ## 📜 Update History
 
+- **v3.0.1 (2026-07-30)**:
+  - **Portable ZIP Build Target**: Configured `electron-builder` (`package.json`) to output both a standard NSIS executable setup installer (`Shadow-Zodiac Setup 3.0.1.exe`) and a standalone portable zip archive (`Shadow-Zodiac-3.0.1-win.zip` / `Shadow-Zodiac Setup 3.0.1.zip`) in `/dist`.
+  - **Standalone Execution**: Portable zip package allows users to extract and run the desktop application directly without system installation or administrator privileges.
 - **v3.0.0 (2026-07-30)**:
   - **Rich Markdown Response Rendering**: Integrated `marked` engine (`marked.parse`) for complete Github Flavored Markdown (GFM) rendering of AI chat messages, formatted headers, bold/italic highlights, bullet/numbered lists, blockquotes, and code blocks.
   - **Click-and-Drag Resizable AI Chat Drawer**: Added a vertical drag handle (`#ai-resize-handle`) on the left border of the AI Assistant drawer.

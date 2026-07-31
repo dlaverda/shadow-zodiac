@@ -1,6 +1,6 @@
 # 🪐 Shadow-Zodiac — eToro Financial Intelligence & AI Sentiment Sentinel
 
-[![Version](https://img.shields.io/badge/version-3.0.1-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
+[![Version](https://img.shields.io/badge/version-3.3.0-blue.svg)](https://gitlab.com/d.laverda-group/d.laverda-project)
 [![License: Lemon Squeezy](https://img.shields.io/badge/License-Lemon%20Squeezy-green.svg)](https://www.lemonsqueezy.com/)
 [![Build: Windows Desktop](https://img.shields.io/badge/Platform-Windows%20Desktop-informational.svg)](#)
 [![Language: English](https://img.shields.io/badge/Language-English-brightgreen.svg)](#)
@@ -153,6 +153,34 @@ For every interaction, structure your response exactly as follows:
 
 ## 📜 Update History
 
+- **v3.3.0 (2026-07-31)**:
+  - **Skeleton Screen Placeholders**: Integrated CSS linear gradient shimmer animations (`skeleton-shimmer`) matching the dark theme layout for dashboard stat cards, portfolio tables, and widget containers (`js/views/dashboard.js` & `styles/main.css`).
+  - **Dynamic Top Progress Bar**: Added a sleek, fixed top progress indicator (`#top-progress-bar`) displaying real-time loading feedback ("Fetching eToro portfolio...", "Calculating 30D metrics & AI signals...").
+  - **Graceful Error Fallback**: Added an inline error card with a 1-click **Retry Loading Dashboard** button in case of network timeouts or fetching errors.
+- **v3.2.1 (2026-07-31)**:
+  - **Portfolio History Analytics Sub-View Tabs**: Integrated 3 dedicated view tabs in `Portfolio History Analytics` (`js/views/portfolio-history.js`) for displaying:
+    1) `📊 Portfolio Equity & Composition` (Stacked Area Chart & Snapshots Table)
+    2) `📜 Closed Positions History` (Paginated, sortable table of all 853 imported closed trades with PnL, leverage, and fees)
+    3) `💳 Account Activity Log` (Paginated, filterable table of all 2,409 imported transactions, deposits, withdrawals, and balances)
+  - **Reflections Deduplication Key Fix**: Preserved exact timestamp strings in `readReflections()` (`server/storage.js`) instead of truncating dates to day/minute levels, eliminating reflection count variations.
+- **v3.2.0 (2026-07-31)**:
+  - **eToro Account Statement Importer (.xlsx)**: Integrated a multi-sheet Excel file importer in Settings (`js/views/settings.js`) supporting drag-and-drop and file selection for eToro statements.
+  - **SheetJS (`xlsx`) Multi-Language Parsing Engine**: Auto-detects French (`Positions fermées`, `Activité du compte`) and English (`Closed Positions`, `Account Activity`) sheet names and column headers.
+  - **Deduplicated Closed Positions & Account Activity Database**: Created `etoro_closed_positions` and `etoro_account_activity` SQLite/MySQL tables with strict unique constraint deduplication (`position_id`, `activity_date`).
+  - **Automatic History Re-Calculation**: Auto-triggers portfolio history backfill and metrics update upon completion of statement imports.
+- **v3.1.0 (2026-07-31)**:
+  - **Pre-Aggregated Market & Financial Metrics**: Replaced raw time-series row dumping in `Script python/ai_agent.py` with SQL pre-aggregation (`30D min/max/avg/return`) resulting in up to 80% reduction in prompt token consumption.
+  - **Top-K Targeted RAG Search**: Filtered historical reflections and news queries to Top-K = 3 to 5 entries max, eliminating context clutter.
+  - **Structured Gemini Response Schema**: Passed `responseMimeType: "application/json"` and strict `responseSchema` for scoring tasks, eliminating JSON parsing errors and conversational token overhead.
+  - **Strict Output Token Limits**: Configured `maxOutputTokens: 1024` and temperature `0.2` across Python and JS Gemini API adapters.
+- **v3.0.3 (2026-07-31)**:
+  - **Fixed Settings Route ReferenceError**: Fixed `saveBtn is not defined` error in `js/views/settings.js` by explicitly declaring `const saveBtn = container.querySelector('#s-save')`.
+  - **100% Automatic MySQL Initialization & Sync**: Automated MySQL database creation (`CREATE DATABASE IF NOT EXISTS shadow_zodiac`), table creation, and full history sync on server startup without requiring manual user credentials entry.
+  - **Simplified Settings UI**: Replaced manual MySQL input fields in Settings with a clean automated status panel and 1-click **Re-Sync MySQL History Now** button.
+- **v3.0.2 (2026-07-31)**:
+  - **Bidirectional MySQL History Sync**: Created complete MySQL schema migration and synchronization engine (`POST /api/mysql/sync` in `server/storage.js`) supporting `reflections`, `portfolio_history`, `ai_discussions`, and `trade_signals`.
+  - **Automatic History Recovery**: Automatically restores and syncs all local reflections (including July 27, 28, 29, 30, and 31 records) from `reflections.json` and SQLite into MySQL upon connection or manual sync trigger.
+  - **One-Click Sync UI Button**: Added **Sync All History to MySQL** button in Settings View (`js/views/settings.js`) with live feedback on synchronized record counts.
 - **v3.0.1 (2026-07-30)**:
   - **Portable ZIP Build Target**: Configured `electron-builder` (`package.json`) to output both a standard NSIS executable setup installer (`Shadow-Zodiac Setup 3.0.1.exe`) and a standalone portable zip archive (`Shadow-Zodiac-3.0.1-win.zip` / `Shadow-Zodiac Setup 3.0.1.zip`) in `/dist`.
   - **Standalone Execution**: Portable zip package allows users to extract and run the desktop application directly without system installation or administrator privileges.

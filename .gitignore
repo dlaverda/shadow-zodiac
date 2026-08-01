@@ -1,0 +1,9 @@
+node_modules/
+*.sqlite
+*.db
+*.log
+*.zip
+*.exe
+data/license_cache*.json
+dist/
+.env

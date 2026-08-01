@@ -35,6 +35,25 @@
 
 ---
 
+## 📸 Application Screenshots Gallery
+
+| Live Portfolio Dashboard | Portfolio History Stacked Analytics |
+|:---:|:---:|
+| ![Main Dashboard Overview](marketing/dashboard-overview.png) | ![Portfolio History Chart](marketing/portfolio-history-chart.png) |
+| *Real-Time eToro Portfolio & Market Metrics* | *Interactive Stacked Composition & Timeframe Aggregation* |
+
+| Closed Positions Database | Account Activity Transactions Log |
+|:---:|:---:|
+| ![Closed Positions Log](marketing/closed-positions-log.png) | ![Account Activity Log](marketing/account-activity-log.png) |
+| *853+ Imported Closed Trades with PnL & Leverage* | *2,409+ Account Transactions & Balance Logs* |
+
+| Resizable Markdown AI Assistant | Settings & Multi-Engine LLM Setup |
+|:---:|:---:|
+| ![Side Drawer AI Chat Assistant](marketing/ai-chat-assistant.png) | ![Settings Configuration](marketing/settings-configuration.png) |
+| *Interactive Resizable Side Drawer Chat Assistant* | *Custom AI Strategy Prompt & Automatic MySQL Sync* |
+
+---
+
 ## ⚡ Free vs. Premium Licensed Comparison
 
 Shadow-Zodiac operates on a transparent **Freemium** model. Basic portfolio tracking and market news are free forever, while advanced AI assistant features and dynamic asset management are unlocked with a Lemon Squeezy license key:
